@@ -68,8 +68,8 @@ const UserUrl = () => {
                 <tr key={url._id} className="hover:bg-gray-50 transition">
                   <td className="px-6 py-4 truncate max-w-xs text-sm text-gray-800">{url.full_url}</td>
                   <td className="px-6 py-4 text-sm text-blue-600 underline hover:text-blue-800">
-                    <a href={`http://localhost:4000/${url.short_url}`} target="_blank" rel="noopener noreferrer">
-                      {`localhost:4000/${url.short_url}`}
+                    <a href={`https://urlshortener-okv9.onrender.com${url.short_url}`} target="_blank" rel="noopener noreferrer">
+                      {`https://urlshortener-okv9.onrender.com/${url.short_url}`}
                     </a>
                   </td>
                   <td className="px-6 py-4 text-sm">
@@ -79,7 +79,7 @@ const UserUrl = () => {
                   </td>
                   <td className="px-6 py-4">
                     <button
-                      onClick={() => handleCopy(`http://localhost:4000/${url.short_url}`, url._id)}
+                      onClick={() => handleCopy(`https://urlshortener-okv9.onrender.com/${url.short_url}`, url._id)}
                       className={`inline-flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition ${
                         copiedId === url._id
                           ? 'bg-green-500 text-white hover:bg-green-600'
@@ -101,15 +101,15 @@ const UserUrl = () => {
             <div key={url._id} className="bg-gray-50 p-4 rounded-md shadow-sm">
               <p className="text-sm text-gray-700 mb-1 truncate"><strong>Original:</strong> {url.full_url}</p>
               <p className="text-sm text-blue-600 underline mb-1">
-                <a href={`http://localhost:4000/${url.short_url}`} target="_blank" rel="noopener noreferrer">
-                  {`localhost:4000/${url.short_url}`}
+                <a href={`https://urlshortener-okv9.onrender.com/${url.short_url}`} target="_blank" rel="noopener noreferrer">
+                  {`https://urlshortener-okv9.onrender.com/${url.short_url}`}
                 </a>
               </p>
               <p className="text-sm text-gray-700 mb-2">
                 <strong>Clicks:</strong> {url.clicks}
               </p>
               <button
-                onClick={() => handleCopy(`http://localhost:4000/${url.short_url}`, url._id)}
+                onClick={() => handleCopy(`https://urlshortener-okv9.onrender.com/${url.short_url}`, url._id)}
                 className={`w-full text-sm font-medium py-2 rounded-md transition ${
                   copiedId === url._id
                     ? 'bg-green-500 text-white'
