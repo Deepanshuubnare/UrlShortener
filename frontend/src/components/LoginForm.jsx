@@ -5,8 +5,8 @@ import { login } from '../store/slice/authSlice';
 import { useNavigate } from '@tanstack/react-router';
 
 const LoginForm = ({ state }) => {
-    const [email, setEmail] = useState('abcd12@gmail.com');
-    const [password, setPassword] = useState('abcd@1010');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const dispatch=useDispatch();
