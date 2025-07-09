@@ -13,7 +13,7 @@ const port =process.env.PORT || 4000;
 import cors from 'cors';
 import { attachUser } from "./src/utils/attachUser.js";
 app.use(cors({
-  origin:"http://localhost:5173",
+  origin:"https://urlshortener-frontend-jjhq.onrender.com",
   credentials:true
 }));
 app.use(express.json());
