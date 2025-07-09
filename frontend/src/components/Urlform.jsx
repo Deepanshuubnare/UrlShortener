@@ -6,7 +6,7 @@ import { createShortUrl } from '../api/shorturlapi';
 import { queryClient } from '../main.jsx'
 import QRCodeDisplay from './QRCodeDisplay.jsx';
 export const Urlform = () => {
-  const [url, setUrl] = useState("https://www.google.com/");
+  const [url, setUrl] = useState("");
   const [shortUrl,setShortUrl]=useState()
   const [copied, setCopied] = useState(false)
     const [error, setError] = useState(null)
