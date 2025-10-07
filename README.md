@@ -1,18 +1,12 @@
-# 🔗 URL Shortener - MERN Stack
+# 🔗 URL Shortener 
 
 A full-stack web application built with the MERN (MongoDB, Express, React, Node.js) stack that transforms long, cumbersome URLs into short, easy-to-share links. The project features a clean user interface and a robust backend to handle URL redirection and analytics.
 
 ---
 
-## 📸 Live Demo & Screenshots
+## 📸 Live Demo 
 
-It's highly recommended to add a live demo link and some screenshots to showcase your work!
-
-* **Live Demo:** `[Insert Your Deployed URL Here]`
-
-*Add your screenshots here:*
-![Project Homepage](https://via.placeholder.com/800x400.png?text=Your+Project+Homepage+Screenshot)
-![Shortened URL Result](https://via.placeholder.com/800x400.png?text=Shortened+URL+Result+Screenshot)
+* **Live Demo:** `https://urlshortener-frontend-jjhq.onrender.com/`
 
 ---
 
@@ -58,7 +52,7 @@ Make sure you have the following installed on your machine:
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/Deepanshuubnare/UrlShortener.git](https://github.com/Deepanshuubnare/UrlShortener.git)
+    git clone https://github.com/Deepanshuubnare/UrlShortener.git
     cd UrlShortener
     ```
 
