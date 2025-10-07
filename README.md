@@ -6,8 +6,7 @@ A full-stack web application built with the MERN (MongoDB, Express, React, Node.
 
 ## 📸 Live Demo 
 
-* **Live Demo:** `[https://urlshortener-frontend-jjhq.onrender.com/]`
-
+* **Live Demo:** [https://urlshortener-frontend-jjhq.onrender.com/](https://urlshortener-frontend-jjhq.onrender.com/)
 ---
 
 ## 🚀 Features
