@@ -40,9 +40,9 @@ export const Urlform = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-5">
         <div>
-          <label htmlFor="url" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="url" className="block text-sm font-medium text-slate-300 mb-2">
             Enter your URL
           </label>
           <input
@@ -52,24 +52,24 @@ export const Urlform = () => {
             onInput={(event)=>setUrl(event.target.value)}
             placeholder="https://example.com"
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-2xl border border-slate-700 bg-slate-900/95 px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/60"
           />
         </div>
         
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
+          className="w-full rounded-2xl bg-gradient-to-r from-cyan-500 to-slate-700 py-3 px-4 text-sm font-semibold text-white shadow-lg shadow-cyan-500/10 transition hover:from-cyan-400 hover:to-slate-600 disabled:opacity-50"
         >Shorten URL
         </button>
         {error && (
-          <div className="mt-4 p-3 bg-red-100 text-red-700 rounded-md">
+          <div className="mt-4 rounded-2xl border border-rose-500/20 bg-rose-900/90 p-3 text-sm text-rose-200">
             {error.message}
           </div>
         )}
        
         {isAuthenticated && (
           <div className="mt-4">
-            <label htmlFor="customSlug" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="customSlug" className="block text-sm font-medium text-slate-300 mb-2">
               Custom URL (optional)
             </label>
             <input
@@ -78,39 +78,34 @@ export const Urlform = () => {
               value={customSlug}
               onChange={(event) => setCustomSlug(event.target.value)}
               placeholder="Enter custom slug"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-2xl border border-slate-700 bg-slate-900/95 px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/60"
             />
           </div>
         )}
         {shortUrl && (
-          <div className="mt-6">
-            <h2 className="text-lg font-semibold mb-2">Your shortened URL:</h2>
-            <div className="flex items-center">
+          <div className="mt-6 rounded-3xl border border-slate-800/70 bg-slate-950/90 p-4 shadow-inner shadow-slate-950/20">
+            <h2 className="text-lg font-semibold text-slate-100 mb-3">Your shortened URL:</h2>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <input
                 type="text"
                 readOnly
                 value={shortUrl}
-                className="flex-1 p-2 border border-gray-300 rounded-l-md bg-gray-50"
+                className="flex-1 rounded-2xl border border-slate-700 bg-slate-900/95 px-4 py-3 text-slate-100"
               />
                <button
                 onClick={handleCopy}
-                className={`px-4 py-2 rounded-r-md transition-colors duration-200 ${
-                  copied 
-                    ? 'bg-green-500 text-white hover:bg-green-600' 
-                    : 'bg-gray-200 hover:bg-gray-300'
-                }`}
+                className={`rounded-2xl px-5 py-3 text-sm font-semibold transition ${copied ? 'bg-emerald-500 text-slate-950 hover:bg-emerald-400' : 'bg-slate-800 text-slate-100 hover:bg-slate-700'}`}
               >
                 {copied ? 'Copied!' : 'Copy'}
               </button>
             </div>
-            </div>
+          </div>
         )}
-            { /* QR Code below the URL */}
-              {isAuthenticated && (
-       <div className="mt-4 flex justify-center">
-        <QRCodeDisplay url={shortUrl} />
-      </div>
-      )}
+        {isAuthenticated && (
+         <div className="mt-4 flex justify-center">
+          <QRCodeDisplay url={shortUrl} />
+        </div>
+        )}
         </form>
         )
 }

@@ -1,6 +1,7 @@
 import axios from "axios";
+const baseURL = import.meta?.env?.VITE_API_URL || "http://localhost:4000";
 const axiosInstance= axios.create({
-    baseURL:"https://urlshortener-okv9.onrender.com",
+    baseURL,
     timeout:10000,
     withCredentials:true
 })

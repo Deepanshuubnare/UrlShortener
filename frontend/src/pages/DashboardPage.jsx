@@ -11,32 +11,29 @@ const DashboardPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-blue-100 to-purple-100 px-4 py-10 flex flex-col items-center relative">
+    <div className="min-h-screen w-full px-4 py-10 text-slate-100">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Dashboard</p>
+            <h1 className="mt-3 text-4xl font-semibold text-slate-100">Your link control center</h1>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <button
+              onClick={handleNavigate}
+              className="glow-button rounded-2xl bg-slate-900/90 px-5 py-3 text-sm font-semibold text-cyan-200 transition hover:bg-slate-800"
+            >
+              📁 View History
+            </button>
+            <AuthButton />
+          </div>
+        </div>
 
-      {/* Auth Button: top-right on md+, inline on mobile */}
-      <div className="w-full flex justify-end md:absolute md:top-4 md:right-5 mb-4 md:mb-0">
-        <AuthButton className="bg-white text-indigo-600 hover:text-white hover:bg-indigo-500 border border-indigo-500 font-medium px-4 py-2 rounded-md shadow transition duration-200" />
-      </div>
-
-      {/* View History Button */}
-      <div className="w-full max-w-3xl flex justify-end mb-4">
-        <button
-          onClick={handleNavigate}
-          className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md hover:from-indigo-600 hover:to-purple-700 transition duration-300"
-        >
-          📁 View History
-        </button>
-      </div>
-
-      {/* Main URL Shortener Content */}
-      <div className="w-full max-w-3xl bg-white p-8 rounded-xl shadow-lg mb-8">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">
-          🔗 URL Shortener
-        </h1>
-        <p className="text-center text-gray-500 text-sm mb-6">
-          Shorten your URLs and track your history all in one place.
-        </p>
-        <Urlform />
+        <div className="dark-card rounded-[2rem] border border-slate-800/70 p-8 shadow-2xl shadow-slate-950/30">
+          <h2 className="text-3xl font-semibold text-slate-100 mb-2">Shorten a new URL</h2>
+          <p className="text-slate-400 mb-8 max-w-2xl">Create fast links and manage your history with a polished dark classical UI.</p>
+          <Urlform />
+        </div>
       </div>
     </div>
   );

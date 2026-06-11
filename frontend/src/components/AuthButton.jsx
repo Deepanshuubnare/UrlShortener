@@ -36,20 +36,17 @@ const AuthButton = () => {
 
   return (
     <div className="flex items-center gap-3">
-      {/* Optional greeting */}
-      {/* {user && <span className="text-sm text-gray-600">Hi, {user.name}</span>} */}
-      
       {user ? (
         <button
           onClick={handleLogout}
-          className="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-md shadow transition duration-200"
+          className="rounded-2xl bg-rose-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-rose-500/20 transition hover:bg-rose-400"
         >
           Logout
         </button>
       ) : (
         <button
           onClick={() => navigate({ to: '/auth' })}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow transition duration-200"
+          className="rounded-2xl bg-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400"
         >
           Login
         </button>

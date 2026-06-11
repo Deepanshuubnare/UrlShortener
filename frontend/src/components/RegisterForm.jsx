@@ -38,21 +38,21 @@ const RegisterForm = ({state}) => {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <div onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <h2 className="text-2xl font-bold text-center mb-6">Create an Account</h2>
+      <div onSubmit={handleSubmit} className="rounded-[1.75rem] border border-slate-800/80 bg-slate-950/95 px-8 pt-6 pb-8 mb-4 shadow-2xl shadow-slate-950/40">
+        <h2 className="text-2xl font-semibold text-slate-100 text-center mb-6">Create an Account</h2>
         
         {error && (
-          <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-md">
+          <div className="mb-4 rounded-2xl border border-rose-500/20 bg-rose-900/90 p-3 text-sm text-rose-200">
             {error}
           </div>
         )}
         
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+          <label className="block text-slate-300 text-sm font-medium mb-2" htmlFor="name">
             Full Name
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full rounded-2xl border border-slate-700 bg-slate-900/95 py-3 px-4 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/60"
             id="name"
             type="text"
             placeholder="Full Name"
@@ -63,11 +63,11 @@ const RegisterForm = ({state}) => {
         </div>
         
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+          <label className="block text-slate-300 text-sm font-medium mb-2" htmlFor="email">
             Email
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full rounded-2xl border border-slate-700 bg-slate-900/95 py-3 px-4 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/60"
             id="email"
             type="email"
             placeholder="Email"
@@ -78,11 +78,11 @@ const RegisterForm = ({state}) => {
         </div>
         
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+          <label className="block text-slate-300 text-sm font-medium mb-2" htmlFor="password">
             Password
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full rounded-2xl border border-slate-700 bg-slate-900/95 py-3 px-4 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/60"
             id="password"
             type="password"
             placeholder="******************"
@@ -96,7 +96,7 @@ const RegisterForm = ({state}) => {
         
         <div className="flex items-center justify-between">
           <button
-            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`w-full rounded-2xl bg-gradient-to-r from-cyan-500 to-slate-700 py-3 px-4 text-sm font-semibold text-white shadow-lg shadow-cyan-500/10 transition hover:from-cyan-400 hover:to-slate-600 focus:outline-none ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
             type="submit"
             onClick={handleSubmit}
             disabled={loading}
@@ -106,8 +106,8 @@ const RegisterForm = ({state}) => {
         </div>
         
         <div className="text-center mt-4">
-          <p className="cursor-pointer text-sm text-gray-600">
-            Already have an account? <span onClick={()=>state(true)} className="text-blue-500 hover:text-blue-700">Sign In</span>
+          <p className="cursor-pointer text-sm text-slate-400">
+            Already have an account? <span onClick={()=>state(true)} className="text-cyan-300 hover:text-cyan-100">Sign In</span>
           </p>
         </div>
       </div>
